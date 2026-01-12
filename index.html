@@ -59,7 +59,23 @@
         <p>&copy; 2026 AL Tech Solutions - Luis Cruz & Andre Juárez</p>
         <p>¿Tienes un proyecto? <strong>¡Contáctanos hoy!</strong></p>
     </footer>
+    <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar el menú automáticamente al hacer clic en un enlace
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 
 </html>
+
