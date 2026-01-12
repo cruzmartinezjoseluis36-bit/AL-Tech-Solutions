@@ -121,4 +121,9 @@ footer {
     padding: 3rem;
     text-align: center;
     background: #020617;
+
+}
+/* Media Query para celulares muy pequeños */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 1.8rem; }
 }
