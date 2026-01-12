@@ -19,6 +19,11 @@ body {
 }
 
 /* Navegación */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -49,6 +54,15 @@ nav a {
     color: white;
     font-weight: 500;
 }
+nav ul li{
+    height: auto;
+    width: auto;
+    padding: 5px;
+}
+nav ul li:hover{
+    border-top: 1px solid #F3F4F6;
+    border-bottom: 1px solid #F3F4F6;
+}
 
 /* Hero Section */
 .hero {
@@ -60,7 +74,7 @@ nav a {
     background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), 
                 url("../Img/Banner.png");
     background-size: cover;
-    padding: 0 20px;
+    
 }
 
 .hero h1 {
@@ -121,50 +135,21 @@ footer {
     padding: 3rem;
     text-align: center;
     background: #020617;
-
 }
-header {
-    background-color: #1a1a1a;
-    padding: 15px 0;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo span { color: #007bff; }
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-}
-
-.nav-menu li { margin-left: 20px; }
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* Estilos para el botón de hamburguesa (Oculto en PC) */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* RESPONSIVE: Cuando la pantalla mide menos de 768px */
 @media (max-width: 768px) {
+    .hero{
+       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .btn { background: #007bff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+
     .menu-toggle {
         display: block; /* Aparece el icono */
     }
@@ -172,26 +157,18 @@ nav {
     .nav-menu {
         position: absolute;
         top: 100%; /* Aparece justo abajo del header */
-        left: -120%; /* Lo escondemos a la izquierda */
+        left: -100%; /* Lo escondemos a la izquierda */
         flex-direction: column;
         background-color: #1a1a1a;
         width: 100%;
+        height: 100vh;
         text-align: center;
         transition: 0.3s; /* Para que deslice suave */
-        padding: 20px 0;
+        
     }
-
     .nav-menu.active {
         left: 0; /* Al activarse, se desliza al centro */
     }
-
-    .nav-menu li {
-        margin: 15px 0;
-    }
-}
-/* Media Query para celulares muy pequeños */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 1.8rem; }
 }
 
 
