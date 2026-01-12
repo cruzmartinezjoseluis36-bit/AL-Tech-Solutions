@@ -172,7 +172,7 @@ nav {
     .nav-menu {
         position: absolute;
         top: 100%; /* Aparece justo abajo del header */
-        left: -100%; /* Lo escondemos a la izquierda */
+        left: -120%; /* Lo escondemos a la izquierda */
         flex-direction: column;
         background-color: #1a1a1a;
         width: 100%;
@@ -193,4 +193,5 @@ nav {
 @media (max-width: 600px) {
     .hero h1 { font-size: 1.8rem; }
 }
+
 
