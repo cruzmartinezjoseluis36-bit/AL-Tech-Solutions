@@ -1,0 +1,460 @@
+/* Importacion de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif ;
+}
+:root{
+
+    /*Paleta de colores */
+    --primary-color: #0F5C8C;
+    --secundary-color: #1790BF;
+    --ligth-blue: #25B8D9;
+    --white: #F2F2F2;
+    --black: #0D0D0D;
+    /* font size*/
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /*Font weight*/
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    /*Border Radius*/
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /*Ancho maximo*/
+    --site-max-width:1300px;
+
+}
+/*Estilos menu*/
+.nav-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    width: 40px;      /* ajusta el tamaño */
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width:100% ;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color) ;
+
+}
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .nav-logo .logo-text{
+    color: var(--white);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+.navbar .nav-menu{
+    display: flex;
+    gap: 10px;
+}
+.navbar .nav-menu .nav-link{
+    padding: 10px 18px;
+    color: var(--white);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover{
+    color:var(--primary-color);
+    background: var(--secundary-color);
+}
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+/*hero */
+.hero-section{
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+.hero-section .section-content{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white);
+    justify-content: space-between;
+}
+.hero-section .hero-details .title{
+    font-size: var(--font-size-xxl);
+    color: var(--black);
+    font-family: "Miniver", sans-serif;
+}
+.hero-section .hero-details .subtitle{
+    margin-top: 8px;
+    max-width: 70%;
+    font-size:var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+.hero-section .hero-details .description{
+    max-width: 70%;
+    font-size: var(--font-size-m);
+    margin: 24px 0 40px;
+
+}
+.hero-section .hero-details .buttons{
+    display: flex;
+    gap: 23px;
+
+}
+.hero-section .hero-details .button{
+    padding: 10px 26px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: var(--border-radius-m);
+    border: 2px solid transparent;
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+
+}
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us{
+    color: var(--white);
+    border-color: var(--white);
+    background: transparent;
+
+}
+.hero-section .hero-details .contact-us:hover{
+    color: var(--white);
+    border-color: var(--secundary-color);
+    background: var(--secundary-color);
+}
+
+.hero-section .hero-image-wrapper{
+    max-width: 500px;
+    margin-right: 30px;
+}
+/*Estilos abput us*/
+.aboutus-section{
+    min-height: 60vh;
+    max-width: 100%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.aboutus-section .aboutus-content{
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.aboutus-section .aboutus-content p, .aboutus-section .aboutus-content h2, .aboutus-section .aboutus-content h3{
+    max-width: 100%;
+    text-align: justify;
+}
+.aboutus-content .title{
+    margin-bottom: 30px;
+}
+
+.aboutus-section .about-image{
+    
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    
+}
+.aboutus-section img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-circle);
+}
+.icons-s-m{
+    margin-top: 10px;
+    font-size: var(--font-size-l);
+}
+/*-----------------------------------------------------------------*/
+/* Estilos Seccion Servicios */
+.services-section {
+    padding: 80px 0;
+    background-color: var(--primary-color); /* Fondo azul para contrastar con Quienes Somos */
+}
+
+.services-section .section-title {
+    text-align: center;
+    color: var(--white);
+    font-size: var(--font-size-xxl);
+    margin-bottom: 50px;
+    font-family: "Miniver", sans-serif;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Rejilla responsiva */
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: var(--border-radius-s);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Efecto de levitación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--secundary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: var(--font-size-l);
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: var(--font-size-n);
+    color: #555;
+    line-height: 1.6;
+}
+/*--------------------------------------------------------estilos para contactanos y footer-------------------------------------------------*/
+/* Estilos Contacto */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 20px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: var(--font-size-m);
+}
+
+.contact-info .info-item i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-n);
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form .button {
+    background: var(--black);
+    color: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-bold);
+    transition: 0.3s ease;
+}
+
+.contact-form .button:hover {
+    background: var(--secundary-color);
+}
+
+/* Estilos Footer */
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-details p {
+    font-size: var(--font-size-s);
+    opacity: 0.8;
+    margin-top: 5px;
+}
+ 
+
+/*--------------------------------------------------------Estilos para celulares-----------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 900px){
+    :root{
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+    body.show-mobile-menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .navbar :where(#menu-close-button, #menu-open-button){
+        display: block;
+        font-size: var(--font-size-l);
+    }
+    .navbar #menu-close-button{
+        position: absolute;
+        right: 30px;
+        top:30px;
+    }
+    .navbar #menu-open-button{
+        color: var(--white);
+    }
+    .navbar .nav-menu{
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white);
+        transition: left 0.2 ease;
+    }
+    body.show-mobile-menu .navbar .nav-menu{
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link{
+        color: var(--black);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+    .hero-section .section-content{
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .hero-section .hero-details :is(.subtitle,.description){
+        max-width: 100%;
+    }
+    .hero-section .hero-details .buttons{
+        justify-content: center;
+    }
+    .hero-section .hero-image-wrapper{
+        max-width: 270px;
+        margin-right: 0 ;
+    }
+    /*-----------------------Sobre Nosotros*/
+    /* Dentro de @media screen and (max-width: 900px) */
+
+    .aboutus-section {
+        flex-direction: column; 
+        padding: 60px 20px;
+        min-height: auto; 
+        gap: 30px;
+    }
+
+    .aboutus-section .about-image, 
+    .aboutus-section .aboutus-content {
+        max-width: 100%; 
+        width: 100%;
+        text-align: center; 
+    }
+
+    .aboutus-section .aboutus-content p {
+        text-align: justify; 
+    }
+
+    .aboutus-section .about-image {
+        justify-content: center; 
+    }
+
+    .aboutus-content .title {
+        margin-bottom: 20px; 
+    }
+
+    /*-----------------------servicios */
+    .services-section {
+        padding: 50px 20px;
+    }
+    /*------------------------contactanos */
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info, .contact-section h2 {
+        text-align: center;
+    }
+    .contact-info .info-item {
+        justify-content: center;
+    }
+}
